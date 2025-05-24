@@ -1,0 +1,77 @@
+/* Feed main area: center content horizontally */
+.feed-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 64px; /* adjust for navbar */
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  background: transparent;
+}
+
+/* Center the postfeed-section and set max width */
+.postfeed-section {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
+  background: transparent;
+}
+
+/* Optional: Remove or comment out old flex settings for .feed-main and .postfeed-section elsewhere in this file */
+
+/* Floating Action Button (FAB) */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffcc00;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.fab:hover {
+  background-color: #f5b800;
+}
+
+/* Overlay for the post form */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.upload-modal {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
