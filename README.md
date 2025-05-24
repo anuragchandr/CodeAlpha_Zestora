@@ -1,28 +1,31 @@
-###Zestora### - A Vibrant Social Media Platform
+
+
+# Zestora -A Vibrant Social Media Platform 
 Connect. Share. Vibe.
 Zestora is a dynamic, full-stack social media platform inspired by the rich storytelling traditions of Bhojpuri culture. Built with modern web technologies, it empowers users to create posts, share images, like, comment, and follow others in a seamless, engaging experience. With a sleek React frontend, a robust Express.js backend, and MongoDB for scalable data storage, Zestora blends cultural heritage with cutting-edge tech to create a vibrant community.
 
-Table of Contents
+# Table of Contents
 
-Features
-Tech Stack
-Project Structure
-Getting Started
-Prerequisites
-Installation
-Environment Variables
-Running the Application
+[Features](#features)  
+[Tech Stack](#tech-stack)  
+[Project Structure](#project-structure)  
+[Getting Started](#getting-started)  
+   - [Prerequisites](#prerequisites)  
+   - [Installation](#installation)  
+   - [Environment Variables](#environment-variables)  
+   - [Running the Application](#running-the-application)  
+
+[Usage](#usage)  
+[API Endpoints](#api-endpoints)  
+[Contributing](#contributing)  
+[Future Enhancements](#future-enhancements)  
+[License](#license)  
+[Contact](#contact)  
 
 
-Usage
-API Endpoints
-Contributing
-Future Enhancements
-License
-Contact
 
 
-Features
+# Features
 Zestora offers a rich set of features designed for modern social media interaction:
 
 User Authentication: Secure signup and signin with JWT-based authentication.
@@ -35,15 +38,15 @@ Single-Page App: React-powered frontend for smooth navigation without reloads.
 Info Pages: About, Privacy Policy, and Contact sections, accessible via a single dynamic page.
 
 
-Tech Stack
-Frontend
+# Tech Stack
+### Frontend
 
 React (18.2.0): JSX-based components for a dynamic, single-page application.
 Tailwind CSS: Utility-first CSS for responsive, modern styling.
 Font Awesome: Icons for likes, comments, and navigation.
 Montserrat Font: Clean, modern typography for a professional look.
 
-Backend
+### Backend
 
 Node.js & Express.js: RESTful API for handling requests.
 MongoDB & Mongoose: NoSQL database for storing users, posts, and comments.
@@ -51,15 +54,15 @@ Multer: File upload middleware for storing images in the uploads/ folder.
 JWT (jsonwebtoken): Secure authentication with tokens.
 Bcryptjs: Password hashing for user security.
 
-Development Tools
+### Development Tools
 
 Babel: Transpiles JSX for browser compatibility.
 Nodemon: Auto-restarts the server during development.
 http-server: Serves the frontend for local testing.
 
 
-###Project Structure###
-
+# Project Structure
+```
 zestora/
 ├── client/                     # Frontend (React)
 │   ├── index.html              # Landing page with signup/signin
@@ -84,54 +87,54 @@ zestora/
 │   └── .env                    # Environment variables
 ├── package.json                # Server dependencies
 └── README.md                   # Project documentation
+```
 
-
-Getting Started
-Prerequisites
+# Getting Started
+## Prerequisites
 
 Node.js (v16 or higher)
 MongoDB (local or cloud, e.g., MongoDB Atlas)
 npm or yarn
 A modern web browser (Chrome, Firefox, etc.)
 
-Installation
+## Installation
 
-Clone the Repository:
+#### Clone the Repository:
 git clone https://github.com/anuragchandr/CodeAlpha_Zestora
 cd zestora
 
 
-Install Backend Dependencies:
+#### Install Backend Dependencies:
 cd server
 npm install
 
 
-Install Frontend Dependencies:
+#### Install Frontend Dependencies:
 
 The frontend uses CDNs for React, Tailwind, and Font Awesome, so no additional installation is required for the client/ directory.
 
 
 
-Environment Variables
-Create a .env file in the server/ directory with the following:
-MONGODB_URI=mongodb://localhost:27017/zestora
+#### Environment Variables
+Create a .env file in the server/ directory with the following: 
+**MONGODB_URI=mongodb://localhost:27017/zestora
 JWT_SECRET=your_jwt_secret_key
-PORT=5000
+PORT=5000**
 
-Running the Application
+### Running the Application
 
-Start MongoDB:
+#### Start MongoDB:
 
 Ensure MongoDB is running locally (mongod) or use a cloud URI.
 
 
-Start the Backend:
+#### Start the Backend:
 cd server
 nodemon index.js
 
 The server will run on http://localhost:5000.
 
-Serve the Frontend:
+#### Serve the Frontend:
 cd client
 npx http-server
 
@@ -139,30 +142,30 @@ Open http://localhost:5173/ in your browser.
 
 
 
-Usage
+# Usage
 
-Signup/Signin:
+### Signup/Signin:
 
 Visit http://localhost:5173/
 Sign up with a username, email, and password, or sign in with existing credentials.
 The JWT token and user data are stored in localStorage.
 
 
-Create a Post:
+### Create a Post:
 
 On the Home Feed (http://localhost:5173), click the “+” icon (mobile) or sidebar button (desktop).
 Enter a description (up to 280 characters) and optionally upload an image.
 Submit to post, and the new post appears at the top of the feed.
 
 
-Interact with Posts:
+### Interact with Posts:
 
 Like posts (heart icon toggles red).
 Click “Comment” to add comments (placeholder for now).
 View posts with images displayed below the text.
 
 
-Navigate:
+### Navigate:
 
 Use the top navbar for search and profile access.
 Desktop: Sidebar for Home, Explore, Profile, Settings, Logout.
@@ -172,60 +175,70 @@ Visit http://localhost:8080/info for About, Privacy Policy, and Contact.
 
 
 
-API Endpoints
+# API Endpoints
 The backend exposes the following RESTful endpoints:
 
-Auth:
+#### Auth:
 POST /api/auth/register: Create a new user (username, email, password).
 POST /api/auth/login: Authenticate a user and return a JWT token.
 
 
-Posts:
+#### Posts:
 POST /api/posts: Create a post with text and optional image (multipart/form-data, requires JWT).
 GET /api/posts: Fetch all posts, sorted by creation date.
 POST /api/posts/:id/like: Like/unlike a post (requires JWT).
 POST /api/posts/:id/comment: Add a comment to a post (requires JWT).
 
 
-Users:
+#### Users:
 GET /api/users/:id: Get user profile data.
 POST /api/users/:id/follow: Follow/unfollow a user (requires JWT).
 
 
 
 
-Contributing
+# Contributing
 We welcome contributions to make Zestora even better! To contribute:
 
-Fork the repository.
-Create a feature branch (git checkout -b feature/YourFeature).
-Commit your changes (git commit -m 'Add YourFeature').
+### Fork the repository.
+```
+-Create a feature branch (git checkout -b feature/YourFeature).
+
+-Commit your changes (git commit -m 'Add YourFeature').
 Push to the branch (git push origin feature/YourFeature).
 Open a pull request with a detailed description.
 
-Please follow the Code of Conduct and ensure code adheres to ESLint and Prettier standards.
+-Please follow the Code of Conduct and ensure code adheres to ESLint and Prettier standards.
+```
+# Future Enhancements
 
-Future Enhancements
+**Infinite Scroll**: Load posts dynamically as users scroll.
 
-Infinite Scroll: Load posts dynamically as users scroll.
-Image Preview: Show image previews in the post creation form.
-Comments Modal: Implement a modal for viewing and adding comments.
-Profile Page: Display user posts, followers, and following.
-Notifications: Real-time alerts for likes, comments, and follows.
-WebSockets: Enable live updates for the feed using Socket.IO.
-Advanced Search: Search users and posts with filters.
+**Image Preview**: Show image previews in the post creation form.
+
+**Comments Modal**: Implement a modal for viewing and adding comments.
+
+**Profile Page**: Display user posts, followers, and following.
+
+**Notifications**: Real-time alerts for likes, comments, and follows.
+
+**WebSockets**: Enable live updates for the feed using Socket.IO.
+
+**Advanced Search**: Search users and posts with filters.
 
 
 
-Contact
+# Contact
 For questions, feedback, or support:
 
-Email: nrgchandra@gmail.com
-GitHub Issues: Open an issue
+**Email**: nrgchandra@gmail.com
+
+**GitHub Issues**: Open an issue
 Project Maintainer: Anurag Chandra (ECE student, NIT Patna)
 
-Follow me for updates!
+*Follow me for updates!*
 
-Built with ❤️ 
+***Built with ❤️***
 
-### note some features are still under develeopment ###
+## #note some features are still under develeopment
+
