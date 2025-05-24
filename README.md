@@ -1,4 +1,4 @@
-Zestora - A Vibrant Social Media Platform
+###Zestora### - A Vibrant Social Media Platform
 Connect. Share. Vibe.
 Zestora is a dynamic, full-stack social media platform inspired by the rich storytelling traditions of Bhojpuri culture. Built with modern web technologies, it empowers users to create posts, share images, like, comment, and follow others in a seamless, engaging experience. With a sleek React frontend, a robust Express.js backend, and MongoDB for scalable data storage, Zestora blends cultural heritage with cutting-edge tech to create a vibrant community.
 
@@ -58,8 +58,9 @@ Nodemon: Auto-restarts the server during development.
 http-server: Serves the frontend for local testing.
 
 
-###Project Structure
-'''zestora/
+###Project Structure###
+
+zestora/
 ├── client/                     # Frontend (React)
 │   ├── index.html              # Landing page with signup/signin
 │   ├── app.jsx                 # Home feed with post creation
@@ -82,7 +83,7 @@ http-server: Serves the frontend for local testing.
 │   ├── index.js                # Main server file
 │   └── .env                    # Environment variables
 ├── package.json                # Server dependencies
-└── README.md                   # Project documentation'''
+└── README.md                   # Project documentation
 
 
 Getting Started
