@@ -58,8 +58,8 @@ Nodemon: Auto-restarts the server during development.
 http-server: Serves the frontend for local testing.
 
 
-Project Structure
-zestora/
+###Project Structure
+'''zestora/
 ├── client/                     # Frontend (React)
 │   ├── index.html              # Landing page with signup/signin
 │   ├── app.jsx                 # Home feed with post creation
@@ -82,7 +82,7 @@ zestora/
 │   ├── index.js                # Main server file
 │   └── .env                    # Environment variables
 ├── package.json                # Server dependencies
-└── README.md                   # Project documentation
+└── README.md                   # Project documentation'''
 
 
 Getting Started
